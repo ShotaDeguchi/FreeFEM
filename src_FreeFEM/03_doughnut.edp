@@ -1,0 +1,14 @@
+// doughnut
+int Nc, Nf;
+
+// inner circle is coarse
+Nc = 64;
+// outer circle is fine
+Nf = 128;
+
+border G1(t = 0, 2 * pi) {x = .25* cos(-t)+ .5; y = .25* sin(-t)+ .5;}
+border G2(t = 0, 2 * pi) {x = .5 * cos(t) + .5; y = .5 * sin(t) + .5;}
+
+mesh Th = buildmesh(G1(Nc) + G2(Nf));
+
+plot(Th, ps = "./eps_files/03_doughnut.eps");

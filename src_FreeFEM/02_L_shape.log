@@ -1,0 +1,29 @@
+-- FreeFem++ v4.11 (Thu, Apr 07, 2022  2:25:37 PM - git v4.11)
+   file : D:\DEGUCHI\14_lectures_2022\応用数学B_火曜日4限目_田上先生\FreeFEM\5th_report\02_L_shape.edp
+ Load: lg_fem lg_mesh lg_mesh3 eigenvalue
+    1 : // triangle
+    2 : int Nc, Nf;
+    3 :
+    4 : // coarse region
+    5 : Nc = 32;
+    6 : // fine region
+    7 : Nf = 64;
+    8 :
+    9 : border G1(t = 0, 1) {x = t; y = 0.;}
+   10 : border G2(t = 0, 1) {x = 1.; y = .5 * t;}
+   11 : border G3(t = 0, 1) {x = -.5 * t + 1.; y = .5;}
+   12 : border G4(t = 0, 1) {x = .5; y = .5 * t + .5;}
+   13 : border G5(t = 0, 1) {x = -.5 * t + .5; y = 1.;}
+   14 : border G6(t = 0, 1) {x = 0.; y = -1. * t + 1.;}
+   15 :
+   16 : mesh Th = buildmesh(G1(Nc) + G2(Nf) + G3(Nf) + G4(Nf) + G5(Nf) + G6(Nc));
+   17 :
+   18 : plot(Th, ps = "./eps_files/02_L_shape.eps");
+   19 :  sizestack + 1024 =1368  ( 344 )
+ 
+  --  mesh:  Nb of Triangles =   8304, Nb of Vertices 4313
+times: compile 0.045s, execution 0.052s,  mpirank:0
+ ######## We forget of deleting   29 Nb pointer,   0Bytes  ,  mpirank 0, memory leak =0
+ CodeAlloc : nb ptr  3844,  size :507416 mpirank: 0
+Ok: Normal End
+ try getConsole D:\DEGUCHI\14_lectures_2022\応用数学B_火曜日4限目_田上先生\FreeFEM\5th_report\02_L_shape.edp

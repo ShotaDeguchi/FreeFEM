@@ -1,0 +1,59 @@
+-- FreeFem++ v4.11 (Thu, Apr 07, 2022  2:25:37 PM - git v4.11)
+   file : D:\DEGUCHI\14_lectures_2022\応用数学B_火曜日4限目_田上先生\FreeFEM\5th_report\99_heat.edp
+ Load: lg_fem lg_mesh lg_mesh3 eigenvalue
+    1 : // ******************************
+    2 : // **** steady heat equation ****
+    3 : // ******************************
+    4 :
+    5 : // vars & params
+    6 : load "iovtk"(load: loadLibary C:\Program Files (x86)\FreeFem++\\.\iovtk = 0) load: iovtk
+ 
+    7 : int N;
+ *** Warning  The identifier N hide a Global identifier
+ 
+    8 : real u;
+    9 :
+   10 : // square region
+   11 : N = 128;
+   12 : border G1(t=0, 1) {x = t ; y = 0.; label=1;}
+   13 : border G2(t=0, 1) {x = 1.; y = t ; label=2;}
+   14 : border G3(t=0, 1) {x = -1. * t + 1.; y = 1.; label=3;}
+   15 : border G4(t=0, 1) {x = 0.; y = -1. * t + 1.; label=4;}
+   16 :
+   17 : // mesh
+   18 : mesh Th = buildmesh(G1(N) + G2(N) + G3(N) + G4(N));
+   19 : plot(Th, ps = "./eps_files/99_heat_mesh.eps");
+   20 :
+   21 : // finite element space w/ P1 elements
+   22 : fespace Vh(Th, P1);
+   23 : Vh uh, vh;
+   24 :
+   25 : // source
+   26 : func f = sin(2. * pi * (x + y));
+   27 :
+   28 : // boundary condition
+   29 : func g = 0.;    // Dirichlet boundary
+   30 : func h = .05;   // Neumann boundary
+   31 :
+   32 : // main
+   33 : solve heat(uh, vh) = int2d(Th)(dx(uh) * dx(vh) + dy(uh) * dy(vh))
+   34 :                      + int2d(Th)(f * vh)
+   35 :                      + on(1, uh = g)
+   36 :                      - int1d(Th, 2, 3, 4)(h * vh);
+   37 :
+   38 : // visualize the result
+   39 : //plot(Th, uh, ps="./eps_files/99_heat_sol.eps");
+   40 : plot(uh, fill=true, value=true, ps="./eps_files/99_heat_sol.eps");
+   41 : savevtk("uh.vtk", Th, uh, dataname="Temperature");
+   42 :
+   43 :  sizestack + 1024 =2456  ( 1432 )
+ 
+  --  mesh:  Nb of Triangles =  39036, Nb of Vertices 19775
+  -- Solve :
+          min 4.61361e-34  max 0.132113
+ 0x1d34f3fa0f0 VTK_FILE 1
+times: compile 0.119s, execution 0.415s,  mpirank:0
+ ######## We forget of deleting   71 Nb pointer,   0Bytes  ,  mpirank 0, memory leak =0
+ CodeAlloc : nb ptr  3898,  size :513008 mpirank: 0
+Ok: Normal End
+ try getConsole D:\DEGUCHI\14_lectures_2022\応用数学B_火曜日4限目_田上先生\FreeFEM\5th_report\99_heat.edp

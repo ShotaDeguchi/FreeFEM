@@ -1,0 +1,26 @@
+-- FreeFem++ v4.11 (Thu, Apr 07, 2022  2:25:37 PM - git v4.11)
+   file : D:\DEGUCHI\14_lectures_2022\応用数学B_火曜日4限目_田上先生\FreeFEM\5th_report\01_square.edp
+ Load: lg_fem lg_mesh lg_mesh3 eigenvalue
+    1 : // triangle
+    2 : int N;
+ *** Warning  The identifier N hide a Global identifier
+ 
+    3 :
+    4 : N = 32;
+    5 :
+    6 : border G1(t = 0, 1) {x = t ; y = 0.;}
+    7 : border G2(t = 0, 1) {x = 1.; y = t ;}
+    8 : border G3(t = 0, 1) {x = -1. * t + 1.; y = 1.;}
+    9 : border G4(t = 0, 1) {x = 0.; y = -1. * t + 1.;}
+   10 :
+   11 : mesh Th = buildmesh(G1(N) + G2(N) + G3(N) + G4(N));
+   12 :
+   13 : plot(Th, ps = "./eps_files/01_square.eps");
+   14 :  sizestack + 1024 =1328  ( 304 )
+ 
+  --  mesh:  Nb of Triangles =   2416, Nb of Vertices 1273
+times: compile 0.028s, execution 0.015s,  mpirank:0
+ ######## We forget of deleting   27 Nb pointer,   0Bytes  ,  mpirank 0, memory leak =0
+ CodeAlloc : nb ptr  3782,  size :504832 mpirank: 0
+Ok: Normal End
+ try getConsole D:\DEGUCHI\14_lectures_2022\応用数学B_火曜日4限目_田上先生\FreeFEM\5th_report\01_square.edp

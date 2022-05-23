@@ -1,0 +1,25 @@
+-- FreeFem++ v4.11 (Thu, Apr 07, 2022  2:25:37 PM - git v4.11)
+   file : D:\DEGUCHI\14_lectures_2022\応用数学B_火曜日4限目_田上先生\FreeFEM\5th_report\03_doughnut.edp
+ Load: lg_fem lg_mesh lg_mesh3 eigenvalue
+    1 : // triangle
+    2 : int Nc, Nf;
+    3 :
+    4 : // inner circle is coarse
+    5 : Nc = 64;
+    6 : // outer circle is fine
+    7 : Nf = 128;
+    8 :
+    9 : border G1(t = 0, 2 * pi) {x = .25* cos(-t)+ .5; y = .25* sin(-t)+ .5;}
+   10 : border G2(t = 0, 2 * pi) {x = .5 * cos(t) + .5; y = .5 * sin(t) + .5;}
+   11 :
+   12 : mesh Th = buildmesh(G1(Nc) + G2(Nf));
+   13 :
+   14 : plot(Th, ps = "./eps_files/03_doughnut.eps");
+   15 :  sizestack + 1024 =1304  ( 280 )
+ 
+  --  mesh:  Nb of Triangles =   2052, Nb of Vertices 1122
+times: compile 0.031s, execution 0.017s,  mpirank:0
+ ######## We forget of deleting   28 Nb pointer,   0Bytes  ,  mpirank 0, memory leak =0
+ CodeAlloc : nb ptr  3753,  size :502960 mpirank: 0
+Ok: Normal End
+ try getConsole D:\DEGUCHI\14_lectures_2022\応用数学B_火曜日4限目_田上先生\FreeFEM\5th_report\03_doughnut.edp

@@ -1,0 +1,13 @@
+// square
+int N;
+
+N = 32;
+
+border G1(t = 0, 1) {x = t ; y = 0.;}
+border G2(t = 0, 1) {x = 1.; y = t ;}
+border G3(t = 0, 1) {x = -1. * t + 1.; y = 1.;}
+border G4(t = 0, 1) {x = 0.; y = -1. * t + 1.;}
+
+mesh Th = buildmesh(G1(N) + G2(N) + G3(N) + G4(N));
+
+plot(Th, ps = "./eps_files/01_square.eps");
