@@ -11,4 +11,4 @@ border G2(t = 0, 2 * pi) {x = .5 * cos(t) + .5; y = .5 * sin(t) + .5;}
 
 mesh Th = buildmesh(G1(Nc) + G2(Nf));
 
-plot(Th, ps = "./eps_files/03_doughnut.eps");
+plot(Th, ps = "./output/03_doughnut.eps");

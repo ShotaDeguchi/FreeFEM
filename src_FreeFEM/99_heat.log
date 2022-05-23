@@ -1,5 +1,5 @@
 -- FreeFem++ v4.11 (Thu, Apr 07, 2022  2:25:37 PM - git v4.11)
-   file : D:\DEGUCHI\14_lectures_2022\応用数学B_火曜日4限目_田上先生\FreeFEM\5th_report\99_heat.edp
+   file : D:\DEGUCHI\14_lectures_2022\TAGAMI_FEM\FreeFEM\work\src_FreeFEM\99_heat.edp
  Load: lg_fem lg_mesh lg_mesh3 eigenvalue
     1 : // ******************************
     2 : // **** steady heat equation ****
@@ -42,18 +42,19 @@
    36 :                      - int1d(Th, 2, 3, 4)(h * vh);
    37 :
    38 : // visualize the result
-   39 : //plot(Th, uh, ps="./eps_files/99_heat_sol.eps");
-   40 : plot(uh, fill=true, value=true, ps="./eps_files/99_heat_sol.eps");
-   41 : savevtk("uh.vtk", Th, uh, dataname="Temperature");
+   39 : //plot(Th, uh, ps="./output/99_heat_sol.eps");
+   40 : plot(uh, fill=true, value=true, ps="./output/99_heat_sol.eps");
+   41 : savevtk("./output/99_heat_sol.vtk", Th, uh, dataname="Temperature");
    42 :
    43 :  sizestack + 1024 =2456  ( 1432 )
  
   --  mesh:  Nb of Triangles =  39036, Nb of Vertices 19775
+ Err opening postscript file ./eps_files/99_heat_mesh.eps
   -- Solve :
           min 4.61361e-34  max 0.132113
- 0x1d34f3fa0f0 VTK_FILE 1
-times: compile 0.119s, execution 0.415s,  mpirank:0
+ 0x23ed95da7f0 VTK_FILE 1
+times: compile 0.107s, execution 0.375s,  mpirank:0
  ######## We forget of deleting   71 Nb pointer,   0Bytes  ,  mpirank 0, memory leak =0
  CodeAlloc : nb ptr  3898,  size :513008 mpirank: 0
 Ok: Normal End
- try getConsole D:\DEGUCHI\14_lectures_2022\応用数学B_火曜日4限目_田上先生\FreeFEM\5th_report\99_heat.edp
+ try getConsole D:\DEGUCHI\14_lectures_2022\TAGAMI_FEM\FreeFEM\work\src_FreeFEM\99_heat.edp
