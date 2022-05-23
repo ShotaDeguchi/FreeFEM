@@ -8,13 +8,9 @@ $$ \frac{\partial u}{\partial n}(0, y) = \frac{\partial u}{\partial n}(1, y) = 0
 
 FreeFEM solves with P1 elements, while NumPy FDM takes regular orthogonal grid, both divide x- & y- domain into 128 subdumains. 
 
-# Solution
+## Solution
 |FreeFEM|FDM (NumPy)|
 |:---:|:---:|
 |<img src="./figures/FreeFEM.png">|<img src="./figures/numpy_FDM.png">|
-
-
-
-
 
 
