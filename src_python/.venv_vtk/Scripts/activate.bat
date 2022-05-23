@@ -8,7 +8,7 @@ if defined _OLD_CODEPAGE (
     "%SystemRoot%\System32\chcp.com" 65001 > nul
 )
 
-set VIRTUAL_ENV=D:\DEGUCHI\14_lectures_2022\応用数学B_火曜日4限目_田上先生\FreeFEM\5th_report\python\.venv_vtk
+set VIRTUAL_ENV=D:\DEGUCHI\14_lectures_2022\TAGAMI_FEM\FreeFEM\work\src_python\.venv_vtk
 
 if not defined PROMPT set PROMPT=$P$G
 

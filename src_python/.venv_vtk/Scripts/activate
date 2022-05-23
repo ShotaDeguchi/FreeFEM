@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="D:\DEGUCHI\14_lectures_2022\応用数学B_火曜日4限目_田上先生\FreeFEM\5th_report\python\.venv_vtk"
+VIRTUAL_ENV="D:\DEGUCHI\14_lectures_2022\TAGAMI_FEM\FreeFEM\work\src_python\.venv_vtk"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
