@@ -3,7 +3,7 @@ FreeFEM & Python (NumPy) code to solve steady heat equation.
 
 ## Code
 ### src_FreeFEM
-Install FreeFEM from [here](https://freefem.org/), and execute codes in <code>./src_FreeFEM/</code>.
+Install FreeFEM from [here](https://freefem.org/), and execute codes in <code>./src_FreeFEM/</code>. They include meshing arbitrary shape into FEM elements (e.g. <code>01_square.d</code>), and heat diffusion simulation.
 
 ### src_python
 Dependencies for Python code are listed in <code>./src_python/requirements.txt</code>. 
