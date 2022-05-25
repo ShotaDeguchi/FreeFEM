@@ -1,6 +1,13 @@
 # FreeFEM
 FreeFEM & Python (NumPy) code to solve steady heat equation. 
 
+## Code
+### src_FreeFEM
+Install FreeFEM from [here](https://freefem.org/), and execute codes in <code>./src_FreeFEM/</code>.
+
+### src_python
+Dependencies for Python code are listed in <code>./src_python/requirements.txt</code>. 
+
 ## Solution
 The following are simulation results of heat equation whose form is:
 $$ \nabla^2 u (x, y) = \sin(2 \pi (x + y)) $$
