@@ -2,10 +2,10 @@
 FreeFEM & Python (NumPy) code to solve steady heat equation. 
 
 ## Code
-### src_FreeFEM
-Install FreeFEM from [here](https://freefem.org/), and execute codes in <code>./src_FreeFEM/</code>. They include meshing arbitrary shape into FEM elements (e.g. <code>01_square.edp</code>), and heat diffusion simulation (<code>99_heat.edp</code>). 
+### FreeFEM
+Install [FreeFEM](https://freefem.org/), and execute codes in <code>./src_FreeFEM/</code>. They include meshing arbitrary shape into FEM elements (e.g. <code>01_square.edp</code>), and heat diffusion simulation (<code>99_heat.edp</code>). 
 
-### src_python
+### Python
 Dependencies for Python codes are listed in <code>./src_python/requirements.txt</code>. FDM is implemented in <code>heat.py</code>, which execute main FDM simulation and saves the solution as <code>.npy</code> format. One needs to run <code>visualize.py</code> to obtain solution illustration. 
 
 ## Solution
