@@ -16,7 +16,7 @@ $$ u (x, 0) = 0 $$
 $$ \frac{\partial u}{\partial n}(x, 1) = 0.05 $$
 $$ \frac{\partial u}{\partial n}(0, y) = \frac{\partial u}{\partial n}(1, y) = 0.05 $$
 
-FreeFEM solves with P1 elements, while NumPy FDM takes regular (evenly spaced) orthogonal grid, both divide x- & y- domain into 128 subdomains. 
+FreeFEM solves above with P1 elements, while NumPy (FDM) takes regular (evenly spaced) orthogonal grid, both divide x- & y- domain into 128 subdomains. 
 
 |FreeFEM|FDM (NumPy)|
 |:---:|:---:|
