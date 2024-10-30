@@ -10,11 +10,16 @@ Dependencies for Python codes are listed in <code>./src_python/requirements.txt<
 
 ## Solution
 The following are simulation results of heat equation whose form is:
-$$ \nabla^2 u (x, y) = \sin(2 \pi (x + y)) $$
-with boundary conditions being:
-$$ u (x, 0) = 0 $$
-$$ \frac{\partial u}{\partial n}(x, 1) = 0.05 $$
-$$ \frac{\partial u}{\partial n}(0, y) = \frac{\partial u}{\partial n}(1, y) = 0.05 $$
+
+$\nabla^2 u (x, y) = \sin(2 \pi (x + y))$
+
+with boundary conditions:
+
+$u (x, 0) = 0$
+
+$\frac{\partial u}{\partial n}(x, 1) = 0.05$
+
+$\frac{\partial u}{\partial n}(0, y) = \frac{\partial u}{\partial n}(1, y) = 0.05$
 
 FreeFEM solves above with P1 elements, while NumPy (FDM) takes regular (evenly spaced) orthogonal grid, both divide x- & y- domain into 128 subdomains. 
 
